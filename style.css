@@ -1,0 +1,286 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F5F5F5; /* Light Gray */
+    color: #333333; /* Dark Gray */
+    overflow-x: hidden;
+}
+
+/* Navbar */
+nav {
+    background-color: #232F3E; /* Dark Navy */
+    padding: 10px 0;
+    position: relative;
+    z-index: 1000;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+nav h1 {
+    color: #FF9900; /* Amazon Orange */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #F5F5F5; /* Light Gray */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF9900; /* Amazon Orange */
+}
+
+/* Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #F5F5F5; /* Light Gray */
+    margin: 3px 0;
+}
+
+/* Home Section */
+#home {
+    padding: 20px 0;
+    background-color: #F5F5F5; /* Light Gray */
+}
+
+#home .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.card {
+    background-color: #FFFFFF; /* White */
+    border: 1px solid #DDDDDD; /* Light Gray */
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.card h2 {
+    color: #FF9900; /* Amazon Orange */
+    cursor: pointer;
+}
+
+.card p, .card ul {
+    color: #333333; /* Dark Gray */
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    padding: 5px 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.card ul li:hover {
+    color: #FF9900; /* Amazon Orange */
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Downloads Section */
+#downloads {
+    padding: 20px 0;
+    background-color: #F5F5F5; /* Light Gray */
+}
+
+#downloads .container {
+    width: 90%;
+    margin: auto;
+}
+
+#downloads ul {
+    list-style: none;
+}
+
+#downloads ul li {
+    margin: 10px 0;
+}
+
+#downloads a {
+    color: #FF9900; /* Amazon Orange */
+    text-decoration: none;
+}
+
+#downloads a:hover {
+    text-decoration: underline;
+}
+
+/* Recommendation Form */
+#recommendation-form {
+    margin-top: 20px;
+}
+
+#recommendation-form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#recommendation-form input, 
+#recommendation-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #DDDDDD; /* Light Gray */
+    border-radius: 5px;
+    background-color: #FFFFFF; /* White */
+    color: #333333; /* Dark Gray */
+}
+
+#recommendation-form button {
+    background-color: #FF9900; /* Amazon Orange */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#recommendation-form button:hover {
+    background-color: #E07B00; /* Darker Orange */
+}
+
+/* Footer */
+footer {
+    background-color: #232F3E; /* Dark Navy */
+    color: #F5F5F5; /* Light Gray */
+    padding: 20px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    color: #FF9900; /* Amazon Orange */
+    cursor: pointer;
+}
+
+.footer-section p {
+    color: #DDDDDD; /* Light Gray */
+    cursor: pointer;
+}
+
+.footer-section p:hover {
+    color: #FF9900; /* Amazon Orange */
+    padding-left: 1px;
+    transition: all .4s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #232F3E; /* Dark Navy */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav h1 {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    #home .container {
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 10px 0;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer-section {
+        margin: 10px 0;
+    }
+}
